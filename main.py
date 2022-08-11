@@ -66,6 +66,9 @@ def move_to_num(number: str) -> None:
             new_dir += "/"
         dir_moved_to.append(new_dir + filename)
         shutil.move(old_dir, new_dir)
+        set_value("log", "Moved!")
+    else:
+        set_value("log", "That's not a valid number; do you need to reconnect?")
 
 
 def undo_movement() -> None:
